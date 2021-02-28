@@ -15,26 +15,26 @@ VBA code was developed to analyze the total volume and return for 12 stocks in 2
 ![Input_box_and_vba](./Resources/Input_box_and_code.png)
 *Figure 1. Input box and corresponding VBA code*
 
-Notice the value entered into the input box is assigned to the variable yearValue. This variable is used in multiple locations throughout the VBA script to access the raw stock data and create a heading for the analysis worksheet.
+Notice the value entered into the input box is assigned to the variable yearValue. This variable is used in multiple locations throughout the VBA script to access the appropriate worksheet containing raw stock data and create a heading for the analysis worksheet.
 
-An array of tickers was also created to hold the stock ticker symbols for the associated stocks. The elements of this array are accessed throughout the code using a tickerIndex, and each ticker index is used to calculate total volume and return from the raw data. The tickers array declaration and assignment are shown in Fig. 2.
+An array of tickers was also created to hold the stock ticker symbols for the associated stocks. The elements of this array are accessed throughout the code using a tickerIndex, and each ticker index is used to calculate total volume and return from the raw data. The tickers array declaration and initialization are shown in Fig. 2.
 
 ![Tickers_array](./Resources/Tickers_array.png)
 *Figure 2. Tickers array declaration and initialization*
 
-One of the purposes of this challenge was to refactor code written during the weekly assignment. Part of the refactoring process involved creating arrays to hold the variables tickerVolumes, tickerStartingPrices, and tickerEndingPrices. This allowed for the variables of interest to be stored in arrays eliminating the need for a nested for loop that looped across the tickers as well as the entire set of raw data. This significantly sped up the execution of this script, which could be valuable if the client wanted to analyze thousands of stocks over multiple years.
+One of the purposes of this challenge was to refactor code written during the weekly assignment. Part of the refactoring process involved creating arrays for tickerVolumes, tickerStartingPrices, and tickerEndingPrices. This allowed for the values of interest to be stored in arrays eliminating the need for a nested for-loop that looped across the tickers as well as the entire set of raw data. This significantly sped up the execution of this script, which could be valuable if the client wanted to analyze thousands of stocks over multiple years.
 
 In order to access the tickers array and write data to the output arrays, a tickerIndex variable was created that takes on values from 0 to 11 and is used to access the appropriate element in each array. Also note that the tickerVolumes array was initialized to zero. The array declarations, declaration and initialization of the tickerIndex, and the initializaion of the tickerVolumes array are shown in Fig. 3.
 
 ![Output_arrays](./Resources/Ticker_idx_output_arrays_totVol_init.png)
-*Figure 3. Declarations for tickerIndex and output arrays as well as initialization of totalVolume array*
+*Figure 3. Declarations for tickerIndex and output arrays as well as initialization of totalVolumes array*
 
 For reference, the for loop used to calculate the ticker volumes and find the starting and ending prices is shown in Fig. 4. This figure also illustrates the use of the tickerIndex variable. Note that the tickerIndex variable is initially set to zero and increments by one every time a different ticker is identified.
 
-![primary_for_loop](./Resources/Ticker_idx_output_arrays_totVol_init.png)
+![primary_for_loop](./Resources/For_loop.png)
 *Figure 4. For loop to find total volume as well as starting and ending prices*
 
-The VBA code developed in this challenge was specifically used to investigate the performance of twelve different stocks in 2017 and 2018. The results for each year are described below. Also note that a timer was incorporated into the code to track performance of the code developed for the weekly assignment against the refactored code. Additionally, buttons were added to run the VBA script and clear the worksheet making the Excel file more user friendly.
+The VBA code developed in this challenge was specifically used to investigate the performance of twelve different stocks in 2017 and 2018. The results for each year are described below. Also note that a timer was incorporated to track the execution speed of the code developed for the weekly assignment against the refactored code. Additionally, buttons were added to run the VBA script and clear the worksheet making the Excel file more user friendly.
 
 ### 2017 Stock Data Analysis
 
@@ -62,7 +62,7 @@ Similar to the 2017 analysis, the refactored code ran considerably faster for th
 
 ## Summary
 
-1. Discuss the advantages and disadvantages of refactoring code
+1. Discuss the advantages and disadvantages of refactoring code.
     - Advantages
         - One of the primary advantages of refactoring code is the improvement in execution speed of the code. This can be particularly advantageous with very large amounts of data. Even if the code correctly performs its intended analysis, clients may not be pleased if the code takes excessive amounts of time to execute.
         - Another advantage of refactoring code is that it can eliminate nested loops and reduce the total line count. This can decrease the chances for errors and make the code easier to modify and/or troubleshoot in future work.
@@ -70,4 +70,4 @@ Similar to the 2017 analysis, the refactored code ran considerably faster for th
         - One of the disadvantages of refactoring is that it can take time to go through the process. In many cases, projects have tight deadlines, and developers may be in a rush to simply develop functioning code. It could be difficult to find the extra time to go back and refactor the code unless a problem arises.
         - Another potential disadvantage of refactoring code, is that it introduces the chance to make errors. Although refactored code can be easier for future modification/troubleshooting, the process of refactoring working code introduces the chance for errors. Therefore, it is important to always maintain a working copy of the code and save often.
 2. How do the advantages and disadvantages discussed above apply to refactoring the original VBA script?
-    - The advantages discussed above directly apply to the code that was refactored for this challenge. The execution speed improved by more than 84% for the refactored code compared to the original code. Additionally, the nested for loop used in the original code was eliminated for the refactored code. This was accomplished through the use of output arrays and the tickerIndex variable used to access the elements of those arrays. In the case of this challenge, the disadvantages were not readily apparent as the refactoring process was used as a tool to help students learn VBA scripting. However, if the original code had been developed outside of this context, the disadvantages could have presented themsleves as additional challenges. For instance, using and properly incrementing the tickerIndex variable could have been a bit of a challenge for those with limited coding experience.
+    - The advantages discussed above directly apply to the code that was refactored for this challenge. The execution speed improved by more than 84% for the refactored code compared to the original code. Additionally, the nested for-loop used in the original code was eliminated for the refactored code. This was accomplished through the use of output arrays and the tickerIndex variable used to access the elements of those arrays. In the case of this challenge, the disadvantages were not readily apparent as the refactoring process was used as a tool to help students learn VBA scripting. However, if the original code had been developed outside of this context, the disadvantages could have presented themsleves as additional challenges. For instance, using and properly incrementing the tickerIndex variable could have been a bit of a challenge for those with limited coding experience.
