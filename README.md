@@ -29,10 +29,10 @@ In order to access the tickers array and write data to the output arrays, a tick
 ![Output_arrays](./Resources/Ticker_idx_output_arrays_totVol_init.png)
 *Figure 3. Declarations for tickerIndex and output arrays as well as initialization of totalVolumes array*
 
-For reference, the for loop used to calculate the ticker volumes and find the starting and ending prices is shown in Fig. 4. This figure also illustrates the use of the tickerIndex variable. Note that the tickerIndex variable is initially set to zero and increments by one every time a different ticker is identified.
+For reference, the for-loop used to calculate the ticker volumes and find the starting and ending prices is shown in Fig. 4. This figure also illustrates the use of the tickerIndex variable. Note that the tickerIndex variable is initially set to zero and increments by one every time a different ticker is identified.
 
 ![primary_for_loop](./Resources/For_loop.png)
-*Figure 4. For loop to find total volume as well as starting and ending prices*
+*Figure 4. For-loop to find total volume as well as starting and ending prices*
 
 The VBA code developed in this challenge was specifically used to investigate the performance of twelve different stocks in 2017 and 2018. The results for each year are described below. Also note that a timer was incorporated to track the execution speed of the code developed for the weekly assignment against the refactored code. Additionally, buttons were added to run the VBA script and clear the worksheet making the Excel file more user friendly.
 
