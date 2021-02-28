@@ -38,7 +38,7 @@ The VBA code developed in this challenge was specifically used to investigate th
 
 ### 2017 Stock Data Analysis
 
-The returns were mostly positive for the twelve stocks under investigation in 2017 ranging from -7.2% for TERP to over 199% for DQ. The total daily volumes ranged from nearly 36,000,000 for DQ to over 782,000,000 for SPWR. It is interesting to note that although DQ saw the lowest total daily volume, it did see the highest return.
+The returns were mostly positive for the twelve stocks under investigation in 2017 ranging from -7.2% for TERP to over 199% for DQ as shown in Fig. 5. The total daily volumes ranged from nearly 36,000,000 for DQ to over 782,000,000 for SPWR. It is interesting to note that although DQ saw the lowest total daily volume, it did see the highest return.
 
 ![2017_data_refactored](./Resources/VBA_Challenge_2017.png)
 *Figure 5. 2017 stock performance and refactored code execution speed*
@@ -55,7 +55,7 @@ The returns for the twelve stocks under investigation were overall much worse in
 ![2018_data_refactored](./Resources/VBA_Challenge_2018.png)
 *Figure 7. 2018 stock performance and refactored code execution speed*
 
-Similar to the 2017 analysis, the refactored code ran considerably faster for the 2018 analysis. The refactored code ran in roughly 0.09 seconds compared to roughly 0.58 seconds for the original code as shown in Fig. 9. Note, however, that the total daily volumes and returns were identical for Figs. 8 and 9 as they should be.
+Similar to the 2017 analysis, the refactored code ran considerably faster for the 2018 analysis. The refactored code ran in roughly 0.09 seconds compared to roughly 0.58 seconds for the original code as shown in Fig. 8. Note, however, that the total daily volumes and returns were identical for Figs. 7 and 8 as they should be.
 
 ![2018_data_original](./Resources/VBA_Challenge_2018_original_code.png)
 *Figure 8. 2018 stock performance and original code execution speed*
