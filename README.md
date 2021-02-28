@@ -17,7 +17,7 @@ VBA code was developed to analyze the total volume and return for 12 stocks in 2
 
 Notice the value entered into the input box is assigned to the variable yearValue. This variable is used in multiple locations throughout the VBA script to access the appropriate worksheet containing raw stock data and create a heading for the analysis worksheet.
 
-An array of tickers was also created to hold the stock ticker symbols for the associated stocks. The elements of this array are accessed throughout the code using a tickerIndex, and each ticker index is used to calculate total volume and return from the raw data. The tickers array declaration and initialization are shown in Fig. 2.
+An array of tickers was also created to hold the stock ticker symbols for the associated stocks. The elements of this array are accessed throughout the code using a tickerIndex variable, and each ticker index is used to calculate total volume and return from the raw data. The tickers array declaration and initialization are shown in Fig. 2.
 
 ![Tickers_array](./Resources/Tickers_array.png)
 *Figure 2. Tickers array declaration and initialization*
